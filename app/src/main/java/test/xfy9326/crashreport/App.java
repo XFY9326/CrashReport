@@ -1,10 +1,9 @@
-# CrashReport
-Report Crash Log By Email
+package test.xfy9326.crashreport;
+import android.app.Application;
+import lib.xfy9326.crashreport.CrashHandler;
 
-------------------
--Useing Method:
-
-  //Only Can Use In Application Method
+public class App extends Application
+{
     @Override
     public void onCreate ()
     {
@@ -12,5 +11,5 @@ Report Crash Log By Email
         super.onCreate();
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(this, "File Selector","test.xfy9326.fileselector.MainActivity", "xfy9326@126.com");
-        //Context AppName MainActivity EmailAddress
     }
+}
